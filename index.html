@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Dosis:wght@700;800&family=Red+Hat+Display:wght@400;500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="./styles/app.css" />
+  <title>Food-Store</title>
+</head>
+
+<body>
+
+  <!-- HEADER------------------------------->
+  <!-- const  headerSection = -->
+  <header id="header" class="header-container">
+    <span class="header-arrow">&lt;</span>
+    <h1 class="header-title ">FoodStore 😋</h1>
+    <!-- shopping cart button -->
+    <button id="cartBtn" class="header-cartBtn">
+      <img src="./styles/shopping-cart.png" alt="shopping cart" />
+      <span id="cartItems" class="cardBtn-cartItems">0</span>
+    </button>
+    <h1 class="header-title header-title--categoryView">Cardápio</h1>
+
+    <form id="searchForm" class="header-searchForm ">
+      <input type="text" placeholder="Buscar...." required />
+      <button id="searchBtn">🔍</button>
+    </form>
+  </header>
+
+  <!-- PAGINA INICIAL------------------------------->
+  <main class="main">
+    <!-- const trendingPreviewSection = -->
+    <section id="trendingPreview" class="trendingPreview-container ">
+      <div class="trendingPreview-header">
+        <h2 class="trendingPreview-title">Os mais pedidos</h2>
+        <button class="trendingPreview-btn">Ver Cardápio</button>
+      </div>
+
+      <article class="trendingPreview-productList">
+        <!-- aqui se pinta la lista de productos Tendencias o en promoción ------------->
+        <div class="product-container">
+          <img src="https://image.tmdb.org/t/p/w300/adOzdWS35KAo21r9R4BuFCkLer6.jpg" class="product-img"
+            alt="Nombre de la película" />
+        </div>
+        <!-- --------- -->
+      </article>
+    </section>
+
+    <!-- const categoriesPreviewSection =  -->
+    <section id="categoriesPreview" class="categoriesPreview-container inactive">
+      <h2 class="categoriesPreview-title">Categorías</h2>
+
+      <article class="categoriesPreview-list">
+        <!-- -------aqui se pintan las categorias de las películas------ -->
+        <div class="category-container">
+          <h3 id="id28" class="category-title">Romance</h3>
+        </div>
+        <!-- ------------- -->
+      </article>
+    </section>
+    <!-- FIN DE PAGINA INICIAL------------------>
+
+    <!-- PAGINA LISTA MENU------------------>
+    <!-- const genericListSection = -->
+    <section id="menuList" class="menuList-container">
+      <!-- aqui se pintan los movies relatedMovies -->
+      <div class="product-container">
+        <div class="description-container">
+          <p class="product-description">
+            x-burger
+          </p>
+          <p class="product-description">
+            Hambúrguer sabor picanha 90g, queijo e molho especial.
+          </p>
+          <p class="product-description">
+            <strong>preço: 4R$</strong>
+          </p>
+        </div>
+        <div class="img-container">
+          <img src="https://s3-sa-east-1.amazonaws.com/deliveryon-uploads/products/rockburguer/70_625f2029382d4.jpg"
+            class="product-img" alt="Nombre de la película" />
+        </div>
+      </div>
+      <!-- ------------- -->
+
+    </section>
+    <!-- FIN DE PAGINA LISTA MENU------------------->
+
+    <!-- const movieDetailSection =  -->
+    <section id="movieDetail" class="movieDetail-container ">
+      <h1 class="movieDetail-title">Deadpool</h1>
+      <span class="movieDetail-score">7.6</span>
+      <p class="movieDetail-description">
+        Wisecracking mercenary Deadpool battles the evil and powerful Cable
+        and other bad guys to save a boy's life.
+      </p>
+
+      <div class="textArea-section">
+        <h2> Alguma Observação?</h2>
+        <textarea id="textArea" placeholder="Ex: Tirar a maionese"></textarea>
+      </div>
+
+      <div class="buttonAdd-section">
+        <button id="quantityBtnDec" data-qty="-1">-</button>
+        <label id="qty" data-number="1" for="quantityBtn"><!-- 1 --></label>
+        <button id="quantityBtnInc" data-qty="1">+</button>
+        <button id="addBtn">Adicionar </button>
+        <span>R$</span>
+        <label id="totalPrice"> R$ 0,00</label>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Made with love ♥ by <strong>DANIEL Q </strong></p>
+    <a class="footer-link" href="https://github.com/danielsantosqc/">
+      <img class="footer-img" src="./styles/github.png" alt="github" />
+    </a>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="./src/secret.js"></script>
+  <script src="./src/nodes.js"></script>
+  <script src="./src/main.js"></script>
+  <script src="./src/navigation.js"></script>
+
+  <script>
+    const textArea = document.querySelector('textArea');
+    textArea.addEventListener('keyup', (e) => {
+      // console.log(e.target.value);
+      // textArea.style.height = 'auto';
+      textArea.style.height = textArea.scrollHeight + 'px';
+    });
+  </script>
+</body>
+
+</html>
