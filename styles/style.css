@@ -1,6 +1,180 @@
 * {
+  margin: 0;
+  border: 0;
+  padding: 0;
   box-sizing: border-box;
 }
-body{
-  background-color: aqua;
+
+/* html{
+  overflow: auto; 
+} */
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.container-app {
+  display: flex;
+  flex-direction: column;
+  /* height: 100vh; */
+}
+
+/* Styles for Header */
+header {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  /* Indica que el header se muestra por encima de los demás elementos */
+  width: 100%;
+  height: 3.5em;
+  background-color: #175779;
+  border: 1px solid red;
+  color: #fff;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.header-arrow {
+  border: white 1px solid;
+}
+
+.header_section-profile {
+  border: white 1px solid;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.header_section-profile_image-profile {
+  width: 45px;
+  height: 45px;
+  border: yellowgreen solid 1px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.header_section-profile_image-profile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.header_section-profile_name-profile {
+  margin-left: 10px;
+}
+
+/* Styles for Footer */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4em;
+  background-color: #175779;
+  color: #fff;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.section-menubar {
+  /* background-color: #333; */
+  color: #fff;
+  width: 100%;
+  border: 1px solid yellow;
+  display: flex;
+  justify-content: space-around;
+}
+
+.menu {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  border: 1px solid red;
+  color: #fff;
+}
+
+/* Styles for main content */
+main {
+  /* Indica el factor de crecimiento del elemento dentro del contenedor flex */
+  flex-grow: 1;
+  /* Indica cómo se maneja el contenido que sobrepasa el tamaño del elemento */
+  overflow: auto;
+  /* da la altura del header e footer, para poder posicionar el main 
+  sin ultrapasar el contenido de header e footer*/
+  margin-top: 3.5em;
+  margin-bottom: 4em;
+  border: rgb(150, 82, 14) 2px solid;
+  padding: 20px 10px;
+}
+
+.section-profile-info {
+  border: greenyellow solid 2px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.section-items {
+  display: flex;
+  flex-wrap: wrap;
+  border: green 1px solid;
+  align-content: center;
+  justify-content: center;
+}
+
+.section--items_element {
+  width: 47%;
+  aspect-ratio: 1/1;
+  border: 1px solid red;
+  border-radius: 10px;
+  margin: 0.2em;
+  position: relative;
+  overflow: hidden;
+}
+
+.section--items_element img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.section--items_element>p {
+  /* Posicionar el párrafo en la parte inferior del div */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+  padding: 10px;
+  /* Agregar un fondo semitransparente al párrafo */
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  word-wrap: break-word;
+}
+
+.inactive {
+  display: none;
+}
+
+.fixed {
+  position: fixed;
+}
+
+/* icons */
+.material-symbols-outlined {
+  font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24
 }
