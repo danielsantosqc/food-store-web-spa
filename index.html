@@ -1,13 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
   <link rel="stylesheet" href="./styles/style.css" />
   <title>Food-Store</title>
 </head>
+
 <body>
-  init...
+  <div class="container-app">
+
+    <!-- header-container -->
+    <header id="header" class="header-container">
+
+      <section class="header_navigation">
+        <div class="navigation_arrow">
+          <span class="arrow ">&lt;</span>
+        </div>
+
+        <div class="navigation_title">
+          <h3>Name item category</h3>
+        </div>
+      </section>
+
+      <section class="header_search inactive">
+          <div id="searchBtn" >🔍</div>
+          <input type="text" placeholder="Buscar...." required />
+          <div>
+            <span>&times;</span>
+          </div>
+      </section>
+
+    </header>
+
+    <!-- main -->
+    <main id="main" class="main-container">
+
+
+      <!-- category items -->
+      <section class="category-items">
+        <div class="category-items_card">
+
+          <div class="card_text-info">
+            <h3 id="title" class="text-info_title">
+              heladito 300g
+            </h3>
+            <p id="description" class="text-info_description">
+              escoge 2 sabores y un sabor para el jarabesadfa sfsadfsafa sdfsafdsafs afsd f a sfsadfsad fsafs
+              escoge 2 sabores y un sabor para el jarabe
+              escoge 2 sabores y un sabor para el jarabe
+            </p>
+            <div class="text-info_price">
+              <p id="price-value">$10,00</p>
+            </div>
+          </div>
+
+          <div class="card_image">
+            <img src="https://loremflickr.com/320/240" alt="" srcset="">
+          </div>
+
+        </div>
+      </section>
+
+
+    </main>
+    <!-- 
+    <footer id="footer" class="footer-container">
+
+    </footer> -->
+  </div>
 </body>
 <script src="src/main.js"></script>
+
 </html>
